@@ -34,7 +34,13 @@ async function scrapeData() {
         "SponsoredBy": "funding_by",
         "Description": "scheme_objective",
         "HowToAvail": "application_process",
-        "ConcernedDepartment": "category"
+        "ConcernedDepartment": "category",
+        "Income": "income",
+        "Age": "age",
+        "Community": "community",
+        "OtherDetails": "other_details",
+        "FundingPattern": "funding_pattern",
+        "BenefitsTypes": "benefit_types"
       }
 
       const data = {};
@@ -88,7 +94,6 @@ async function scrapeData() {
             if(leftCol[i] === "FundingPattern" || leftCol[i] === "BenefitsTypes") benefit[leftCol[i]] = rightCol[i];
           }
           data["benefits_provided"] = benefit;
-          console.log(data);
         }
 
         for (let i = 0; i < leftCol.length; i++) {
